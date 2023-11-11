@@ -19,6 +19,10 @@ body {
     margin: auto;
 }
 
+.imagem {
+    text-align: center;
+}
+
 .hero_title {
     margin-top: 0;
 }
@@ -27,8 +31,6 @@ body {
     list-style-type: none;
     padding: 0;
     text-align: right;
-
-    /* TODO: funcionar com hamburguer menor */
     display: none;
 }
 
@@ -110,6 +112,11 @@ img {
     padding: 1rem;
 }
 
+.testemunho_thumb {
+    width: 8.125rem;
+    height: 8.125rem;
+}
+
 .contato {
     background-color: var(--gray);
     border-radius: 5px;
@@ -123,7 +130,6 @@ img {
 
 .footer {
     background-color: var(--gray);
-    padding: 3rem 0;
 }
 
 .footer ul {
