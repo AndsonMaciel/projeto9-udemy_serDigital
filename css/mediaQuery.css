@@ -12,13 +12,16 @@
     }
 
     .header {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 
+    .menu-btn,
+    .menu-icon {
+        display: none;
+    }
+
     .header-menu {
-        display: block;
+        /* display: block; */
         margin: 0;
     }
 
@@ -29,11 +32,6 @@
 
     .header-menu a {
         padding: 1rem;
-    }
-
-    .testemunho {
-        display: flex;
-        gap: 1rem;
     }
 
     .contato_image {
@@ -75,12 +73,6 @@
         margin-bottom: 6.25rem;
     }
 
-    .testemunho {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .row {
         gap: 3rem;
     }
@@ -107,6 +99,10 @@
 
     .row>.lg-1-5 {
         grid-column: 1 / 6;
+    }
+
+    .row>.lg-1-7 {
+        grid-column: 1 / 8;
     }
 
     .row>.lg-8-12 {
