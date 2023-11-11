@@ -37,9 +37,13 @@ body {
     /* display: none; */
 }
 
+.header-menu li {
+    padding: .25rem;
+}
+
 .header-menu a {
     display: block;
-    padding: 2em 0;
+    padding: 1.75em 0;
 
 }
 
@@ -223,6 +227,32 @@ img {
     justify-content: space-between;
 }
 
+.header-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: max-height .3s;
+    margin: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.menu-btn:checked~.header-menu {
+    max-height: 100vh;
+}
+
+.menu-btn:checked+.menu-icon .nav-icon {
+    background-color: transparent;
+}
+
+.header-menu:focus-within {
+    max-height: 100vh;
+}
+
 .header nav {
     display: flex;
     flex-direction: column;
@@ -232,6 +262,7 @@ img {
 .menu-icon {
     position: relative;
     cursor: pointer;
+    height: 24px;
 }
 
 .nav-icon {
@@ -249,7 +280,8 @@ img {
     display: inline-block;
     height: 2px;
     width: 24px;
-    position: absolute
+    position: absolute;
+    transition: transform .5s;
 }
 
 .nav-icon::after {
@@ -258,4 +290,17 @@ img {
 
 .nav-icon::before {
     transform: translateY(-8px);
+}
+
+.menu-btn:checked+.menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked+.menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:focus-visible+.menu-icon {
+    outline: 2px solid black;
+    outline-offset: 3px;
 }

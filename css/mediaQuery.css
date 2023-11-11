@@ -21,8 +21,10 @@
     }
 
     .header-menu {
-        /* display: block; */
         margin: 0;
+        position: static;
+        max-height: initial;
+        background-color: initial;
     }
 
     .header-menu li {
